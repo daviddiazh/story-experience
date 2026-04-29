@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Special+Elite&display=swap');
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* ── Cross pattern ✦ x x x x ── */
+.crossPattern {
+  position: relative;
+  z-index: 2;
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+  color: rgba(255, 45, 104, 0.5);
+  letter-spacing: 10px;
+  margin-top: 8px;
+  opacity: 0;
+  margin: 20px 0;
+  animation: fadeInUp 1.5s 1.2s ease forwards;
+  text-shadow: 0 0 6px rgba(255, 45, 104, 0.3);
+}
+
+/* ── Fleur-de-lis divider ── */
+.divider {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 77px;
+  opacity: 0;
+  animation: fadeInUp 1.5s 0.8s ease forwards;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 45, 104, 0.4),
+    transparent
+  );
+}
+
+.dividerSymbol {
+  font-size: 1.2rem;
+  color: rgba(255, 45, 104, 0.5);
+  text-shadow: 0 0 10px rgba(255, 45, 104, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}

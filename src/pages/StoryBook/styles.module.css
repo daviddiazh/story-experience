@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Delius&display=swap');
+
+.bookWrapper {
+  position: relative;
+  z-index: 2;
+  width: 95vw;
+  max-width: 1200px;
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+/* ── Page base ── */
+.page {
+  background-color: #0d0a0e;
+  background-image: linear-gradient(135deg, #1a1018 0%, #0d0a0e 50%, #1a1018 100%);
+  padding: 40px 36px;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Delius', cursive;
+  color: #f2f2f2;
+}
+
+/* Aged paper texture overlay */
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Inner gothic border */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255, 45, 104, 0.12);
+  pointer-events: none;
+}
+
+/* ── Cover page ── */
+.cover {
+  composes: page;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0d070b;
+  background-image: linear-gradient(145deg, #12090f 0%, #1a0e16 40%, #0d070b 100%);
+}
+
+.coverTitle {
+  font-family: 'Special Elite', cursive;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  color: #ff2d88;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 10px rgba(255, 45, 104, 0.6),
+    0 0 30px rgba(255, 45, 104, 0.3);
+  margin: 0 0 12px;
+}
+
+.coverSubtitle {
+  font-family: 'Delius', cursive;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: rgba(242, 242, 242, 0.5);
+  letter-spacing: 3px;
+}
+
+.coverFleur {
+  font-size: 2rem;
+  color: rgba(255, 45, 104, 0.35);
+  margin: 20px 0;
+  text-shadow: 0 0 8px rgba(255, 45, 104, 0.25);
+}
+
+.coverCrosses {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.9rem;
+  color: rgba(255, 45, 104, 0.4);
+  letter-spacing: 8px;
+  margin-top: 8px;
+}
+
+/* Cover spine line */
+.cover::after {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  border: 2px solid rgba(255, 45, 104, 0.15);
+  box-shadow: inset 0 0 30px rgba(255, 45, 104, 0.04);
+  pointer-events: none;
+}
+
+/* ── Page content ── */
+.pageNumber {
+  font-family: 'Special Elite', cursive;
+  font-size: 0.75rem;
+  color: rgba(255, 45, 104, 0.8);
+  font-weight: 700;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+}
+
+.pageTitle {
+  font-family: 'Special Elite', cursive;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #ff2d88;
+  letter-spacing: 3px;
+  margin: 0 0 6px;
+  text-shadow: 0 0 8px rgba(255, 45, 104, 0.3);
+}
+
+.pageDivider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 16px;
+}
+
+.pageDivider::before,
+.pageDivider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 45, 104, 0.25), transparent);
+}
+
+.pageDividerSymbol {
+  font-size: 0.9rem;
+  color: rgba(255, 45, 104, 0.3);
+}
+
+.pageText {
+  font-family: 'Delius', cursive;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: rgba(242, 242, 242, 0.7);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── Corner ornaments on pages ── */
+.pageCornerTL,
+.pageCornerBR {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.pageCornerTL {
+  top: 8px;
+  left: 8px;
+  border-top: 1px solid rgba(255, 45, 104, 0.15);
+  border-left: 1px solid rgba(255, 45, 104, 0.15);
+}
+
+.pageCornerBR {
+  bottom: 8px;
+  right: 8px;
+  border-bottom: 1px solid rgba(255, 45, 104, 0.15);
+  border-right: 1px solid rgba(255, 45, 104, 0.15);
+}
+
+/* ── Back cover ── */
+.backCover {
+  composes: cover;
+}
+
+.backCoverSymbol {
+  font-size: 3rem;
+  color: rgba(255, 45, 104, 0.2);
+  text-shadow: 0 0 15px rgba(255, 45, 104, 0.15);
+}

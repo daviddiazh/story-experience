@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.base {
+  font-family: 'Special Elite', cursive;
+  color: #f2f2f2;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* ── Variants ── */
+.title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 10px rgba(255, 45, 104, 0.7),
+    0 0 40px rgba(255, 45, 104, 0.4),
+    0 0 80px rgba(255, 45, 104, 0.2);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  letter-spacing: 3px;
+}
+
+.body {
+  font-size: clamp(0.875rem, 2vw, 1.1rem);
+  letter-spacing: 1px;
+}
+
+/* ── Weights ── */
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}

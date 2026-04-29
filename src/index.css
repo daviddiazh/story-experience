@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ── react-pageflip: solid black behind pages during flip ── */
+.stf__parent {
+  background-color: #000000 !important;
+}
+
+.stf__block {
+  background-color: #000000 !important;
+  overflow: hidden;
+}
+
+.stf__item {
+  background-color: #000000 !important;
+}
