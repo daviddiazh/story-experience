@@ -35,9 +35,10 @@ const BackCover = forwardRef<HTMLDivElement, Record<string, never>>(
 export const StoryBook = () => {
   return (
     <GothicLayout>
-      <Typography variant="title">Crónicas</Typography>
+      <div className={styles.bookPage}>
+        <Typography variant="title">Crónicas</Typography>
 
-      <div className={styles.bookWrapper}>
+        <div className={styles.bookWrapper}>
         {/* @ts-expect-error react-pageflip types don't support React 18+ children */}
         <HTMLFlipBook
           width={550}
@@ -109,6 +110,7 @@ export const StoryBook = () => {
 
           <BackCover />
         </HTMLFlipBook>
+        </div>
       </div>
     </GothicLayout>
   );

@@ -16,19 +16,21 @@ export default function InvitationPage() {
 
   return (
     <GothicLayout className={entered ? styles.fadeOut : ''}>
-      <Typography variant="title">ERES INVITADA</Typography>
+      <div className={styles.wrapper}>
+        <Typography variant="title">ERES INVITADA</Typography>
 
-      <div className={styles.divider}>
-        <span className={styles.dividerSymbol}>⚜</span>
+        <div className={styles.divider}>
+          <span className={styles.dividerSymbol}>⚔</span>
+        </div>
+
+        <Typography variant="subtitle" as="p">AL PALAIS DES OMBRES</Typography>
+        <Typography variant="subtitle" as="p">Un lugar donde la perfección</Typography>
+        <Typography variant="subtitle" as="p">es el único camino.</Typography>
+
+        <span className={styles.crossPattern}>✦ ✕ ✕ ✕ ✕</span>
+
+        <Button text='ACEPTAR INVITACIÓN' onClick={handleEnter} />
       </div>
-
-      <Typography variant="subtitle" as="p">AL PALAIS DES OMBRES</Typography>
-      <Typography variant="subtitle" as="p">Un lugar donde la perfección</Typography>
-      <Typography variant="subtitle" as="p">es el único camino.</Typography>
-
-      <span className={styles.crossPattern}>✦ ✕ ✕ ✕ ✕</span>
-
-      <Button text='ACEPTAR INVITACIÓN' onClick={handleEnter} />
     </GothicLayout>
   );
 }
