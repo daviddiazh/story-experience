@@ -2,6 +2,7 @@ import HTMLFlipBook from "react-pageflip";
 import { forwardRef } from "react";
 import { GothicLayout } from "../../components/GothicLayout";
 import { Typography } from "../../components/Typography";
+import { GoBackHeader } from "../../components/GoBackHeader";
 import styles from "./styles.module.css";
 
 import D1 from "../../assets/diary/D1.png"
@@ -42,6 +43,7 @@ const BackCover = forwardRef<HTMLDivElement, Record<string, never>>(
 export const StoryBook = () => {
   return (
     <GothicLayout>
+      <GoBackHeader />
       <div className={styles.bookPage}>
         <Typography variant="title">Crónicas</Typography>
 

@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Special Elite', cursive;
+  font-size: 0.9rem;
+  color: rgba(255, 45, 104, 0.8);
+  letter-spacing: 2px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  color: #ff2d68;
+  background: rgba(255, 45, 104, 0.09);
+  text-shadow: 0 0 8px rgba(255, 45, 104, 0.3);
+}
+
+.arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.backButton:hover .arrow {
+  transform: translateX(-4px);
+}

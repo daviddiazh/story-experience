@@ -1,6 +1,7 @@
 import { GothicLayout } from '../../components/GothicLayout';
 import { Typography } from '../../components/Typography';
 import { Button } from '../../components/Button';
+import { GoBackHeader } from '../../components/GoBackHeader';
 import styles from './styles.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -35,6 +36,7 @@ export default function HomePage() {
 
   return (
     <GothicLayout className={entered ? styles.fadeOut : ''}>
+      <GoBackHeader />
       <div className={styles.container}>
         <div className={styles.thirthy}>
           <Typography variant="title" style={{textAlign: 'center'}}>EL PALAIS</Typography>
@@ -43,8 +45,6 @@ export default function HomePage() {
           <Typography variant="subtitle" style={{textAlign: 'center'}}>Una decisión</Typography>
         </div>
         <div className={styles.sixthy}>
-          {/* <Typography variant="subtitle">Carrusel</Typography> */}
-
           <Swiper
             pagination={{ clickable: true }}
             mousewheel={false}
@@ -68,11 +68,12 @@ export default function HomePage() {
                   src={item}
                   alt="Place"
                   loading="lazy"
+                  style={{
+                    padding: '0 20px'
+                  }}
                 />
               </SwiperSlide>
             ))}
-            {/* <div className="swiper-button-prev" /> */}
-            {/* <div className="swiper-button-next" /> */}
           </Swiper>
         </div>
       </div>
