@@ -24,17 +24,42 @@ const Page = forwardRef<HTMLDivElement, { children: React.ReactNode; className?:
 
 const CoverPage = forwardRef<HTMLDivElement, Record<string, never>>(
   (_props, ref) => (
-    <div ref={ref} className={styles.cover}>
-      <h2 className={styles.coverTitle}>PALAIS DES OMBRES</h2>
-      <p className={styles.coverSubtitle}>CRÓNICAS PROHIBIDAS</p>
-      <span className={styles.coverCrosses}>✕ ✕ ✕</span>
+    <div
+      ref={ref}
+      className={styles.cover}
+    >
+        <div
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+                width: '100%',
+            }}
+        >
+            <h2 className={styles.coverTitle}>PALAIS DES OMBRES</h2>
+            <p className={styles.coverSubtitle}>CRÓNICAS PROHIBIDAS</p>
+            <span className={styles.coverCrosses}>✕ ✕ ✕</span>
+        </div>
     </div>
   )
 );
 
 const BackCover = forwardRef<HTMLDivElement, Record<string, never>>(
   (_props, ref) => (
-    <div ref={ref} className={styles.backCover}>
+    <div
+      ref={ref}
+      className={styles.backCover}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%',
+        width: '100%',
+      }}
+    >
       <span className={styles.coverCrosses}>✕ ✕ ✕ ✕</span>
     </div>
   )
