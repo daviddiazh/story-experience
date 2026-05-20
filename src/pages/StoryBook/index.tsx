@@ -4,6 +4,13 @@ import { GothicLayout } from "../../components/GothicLayout";
 import { Typography } from "../../components/Typography";
 import styles from "./styles.module.css";
 
+import D1 from "../../assets/diary/D1.png"
+import D2 from "../../assets/diary/D2.png"
+import D3 from "../../assets/diary/D3.png"
+import D4 from "../../assets/diary/D4.png"
+import D5 from "../../assets/diary/D5.png"
+import D6 from "../../assets/diary/D6.png"
+
 const Page = forwardRef<HTMLDivElement, { children: React.ReactNode; className?: string }>(
   ({ children, className }, ref) => (
     <div ref={ref} className={`${styles.page} ${className ?? ''}`}>
@@ -70,20 +77,15 @@ export const StoryBook = () => {
             <div className={styles.pageDivider}>
               <span className={styles.pageDividerSymbol}>✦</span>
             </div>
-            <p className={styles.pageText}>
-              La invitación llegó sin remitente. Un sobre negro, lacrado con cera
-              carmesí, esperaba sobre la mesita como si siempre hubiera estado ahí.
-            </p>
-            <span className={styles.pageNumber}>— 1 —</span>
-          </Page>
 
-          <Page>
-            <p className={styles.pageText}>
-              "Eres invitada al Palais des Ombres", decía con letras que parecían
-              escritas con sangre seca. Debajo, una sola instrucción:
-              "La belleza es sumisión disfrazada de elección."
-            </p>
-            <span className={styles.pageNumber}>— 2 —</span>
+            <img
+                src={D1}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
+            <span className={styles.pageNumber}>— 1 —</span>
           </Page>
 
           <Page>
@@ -91,21 +93,79 @@ export const StoryBook = () => {
             <div className={styles.pageDivider}>
               <span className={styles.pageDividerSymbol}>✦</span>
             </div>
-            <p className={styles.pageText}>
-              Las puertas del palacio se abrieron sin que nadie las tocara. El aire
-              olía a rosas marchitas y a promesas rotas. Adentro, las muñecas
-              esperaban en silencio.
-            </p>
+
+            <img
+                src={D2}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
+            <span className={styles.pageNumber}>— 2 —</span>
+          </Page>
+
+          <Page>
+            <h3 className={styles.pageTitle}>CAPÍTULO III</h3>
+            <div className={styles.pageDivider}>
+              <span className={styles.pageDividerSymbol}>✦</span>
+            </div>
+
+            <img
+                src={D3}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
             <span className={styles.pageNumber}>— 3 —</span>
           </Page>
 
           <Page>
-            <p className={styles.pageText}>
-              Cada una perfecta. Cada una vacía. Sus ojos de porcelana seguían
-              cada movimiento, como si juzgaran en silencio a quien se atreviera
-              a cruzar el umbral.
-            </p>
+            <h3 className={styles.pageTitle}>CAPÍTULO IV</h3>
+            <div className={styles.pageDivider}>
+              <span className={styles.pageDividerSymbol}>✦</span>
+            </div>
+
+            <img
+                src={D4}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
             <span className={styles.pageNumber}>— 4 —</span>
+          </Page>
+
+          <Page>
+            <h3 className={styles.pageTitle}>CAPÍTULO V</h3>
+            <div className={styles.pageDivider}>
+              <span className={styles.pageDividerSymbol}>✦</span>
+            </div>
+
+            <img
+                src={D5}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
+            <span className={styles.pageNumber}>— 5 —</span>
+          </Page>
+
+          <Page>
+            <h3 className={styles.pageTitle}>CAPÍTULO VI</h3>
+            <div className={styles.pageDivider}>
+              <span className={styles.pageDividerSymbol}>✦</span>
+            </div>
+
+            <img
+                src={D6}
+                width={500}
+                height={600}
+                className={styles.diaryImage}
+                alt="Diario"
+            />
+            <span className={styles.pageNumber}>— 6 —</span>
           </Page>
 
           <BackCover />
